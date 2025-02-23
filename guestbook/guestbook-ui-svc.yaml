@@ -4,10 +4,9 @@ metadata:
   name: guestbook-ui
 spec:
   type: NodePort
-  app: guestbook-ui
-  ports:
-  - port: 80
-    targetPort: 8080
-    nodeport: 300080
   selector:
     app: guestbook-ui
+  ports:
+    - port: 80
+      targetPort: 8080
+      nodePort: 30080  # Must be between 30000-32767
